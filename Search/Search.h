@@ -12,7 +12,7 @@ public:
 	void put(const std::string& path, const std::vector<std::string>& filePatterns, const std::string& reg);
 	std::string get();
 private:
-	void scanner(std::string fileSpec, std::string reg);
+	void scanner(const std::string& fileSpec, const std::string& reg);
 private:
 	Async::BlockingQueue<std::string> q_;
 	IFileMgr * pFileMgr;
