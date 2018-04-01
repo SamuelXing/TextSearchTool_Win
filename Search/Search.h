@@ -14,9 +14,11 @@ public:
 	};
 	void setText(const std::string&);
 	void scanner(const std::string& fileSpec);
+	void done();
 	///////////////////////
 	void setFileMgr(IFileMgr* IfileMgr);
 	void put(const std::string& path, const std::vector<std::string>& filePatterns, const std::string& reg);
+	void put(const std::string&);
 	void search();
 	std::string get();
 	void scanner(const std::string& fileSpec, const std::string& reg);

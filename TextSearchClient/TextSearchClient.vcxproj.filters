@@ -29,10 +29,10 @@
     <ClCompile Include="TextSearchClient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\TextSearchComp\TextSearchComp_i.c">
+    <ClCompile Include="..\FileMgrComp\FileMgrComp_i.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\FileMgrComp\FileMgrComp_i.c">
+    <ClCompile Include="..\TextSearchComp\TextSearchComp_i.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
