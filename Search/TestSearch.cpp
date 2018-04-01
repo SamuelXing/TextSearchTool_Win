@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "Search.h"
 
-#define TEST_SEARCHCOMP
 #ifdef TEST_SEARCHCOMP
 int main()
 {
@@ -12,10 +11,10 @@ int main()
 	filePatterns.push_back("*.cpp");
 
 	std::string regStr = "(.*?)FileSys(.*?)";
-
+	IFileMgr* IfileMgr = FileMgrFactory::CreateFileMgr();
 	ISearch* searchInstance = new Search();
+	searchInstance->setFileMgr(IfileMgr);
 	searchInstance->put(".", filePatterns, regStr);
-
 
 	std::cout << "\n\n Results: \n";
 	std::cout << "=========================\n";
