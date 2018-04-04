@@ -8,22 +8,16 @@ class Search :public ISearch
 public:
 	Search() {}
 	virtual ~Search()
-	{
-		if (pFileMgr != nullptr)
-			delete pFileMgr;
-	};
+	{};
 	void setText(const std::string&);
-	void scanner(const std::string& fileSpec);
-	void done();
+	std::vector<std::string> scanner(const std::string& fileSpec);
+	std::vector<std::string> scanner(const std::string& fileSpec, const std::string& text);
 	///////////////////////
-	void setFileMgr(IFileMgr* IfileMgr);
+	/*
 	void put(const std::string& path, const std::vector<std::string>& filePatterns, const std::string& reg);
 	void put(const std::string&);
 	void search();
-	std::string get();
-	void scanner(const std::string& fileSpec, const std::string& reg);
+	*/
 private:
-	Async::BlockingQueue<std::string> q_;
-	IFileMgr * pFileMgr;
 	std::string text_;
 };
