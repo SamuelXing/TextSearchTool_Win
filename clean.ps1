@@ -1,3 +1,10 @@
-pwd
+cd FileMgrComp
+& "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" .\FileMgrComp.vcxproj /t:Clean
 
-C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe TextSearchComp_Win.sln /t:clean
+cd ..\TextSearchComp
+& "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" .\TextSearchComp.vcxproj /t:Clean
+
+cd ..\TextSearchClient
+& "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\MSBuild\15.0\Bin\MSBuild.exe" .\TextSearchClient.vcxproj /t:Clean
+
+cd ..
