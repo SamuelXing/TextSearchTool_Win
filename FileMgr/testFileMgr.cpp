@@ -2,13 +2,8 @@
 #include "FileMgrFactory.h"
 #include<iostream>
 
+// ------<test stub>------
 #ifdef TEST_FILEMGR
-
-void test() 
-{
-	std::cout << "Here\n";
-} 
-
 int main()
 {
 	std::cout << "  DEMO FILE MANAGER \n";

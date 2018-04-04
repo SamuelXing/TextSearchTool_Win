@@ -1,30 +1,20 @@
 #include "stdafx.h"
 #include "Search.h"
 
+// ------<test stub>-------
 #ifdef TEST_SEARCHCOMP
 int main()
 {
 	std::cout << "  TEST SEARCH COMPONENT\n";
 	std::cout << "=========================\n";
-	std::vector<std::string> filePatterns;
-	filePatterns.push_back("*.h");
-	filePatterns.push_back("*.cpp");
-
+	std::vector<std::string> result;
 	std::string regStr = "(.*?)FileSys(.*?)";
-	IFileMgr* IfileMgr = FileMgrFactory::CreateFileMgr();
 	ISearch* searchInstance = new Search();
-	searchInstance->setFileMgr(IfileMgr);
-	searchInstance->put(".", filePatterns, regStr);
-
-	std::cout << "\n\n Results: \n";
-	std::cout << "=========================\n";
-	std::string msg;
-	do
+	result = searchInstance->scanner("Specify a filename", regStr);
+	for (int i = 0; i < result.size(); i++) 
 	{
-		msg = searchInstance->get();
-		std::cout << msg << std::endl;
-	} while (msg != "END");
-
+		std::cout << result << std::endl;
+	}
 	return 0;
 }
 #endif // TEST_SEARCHCOMP

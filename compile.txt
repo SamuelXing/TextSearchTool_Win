@@ -1,0 +1,10 @@
+cd FileMgrComp
+msbuild .\FileMgrComp.vcxproj
+
+cd ..\TextSearchComp
+msbuild .\TextSearchComp.vcxproj
+
+cd ..\TextSearchClient
+msbuild .\TextSearchClient.vcxproj
+
+cd ..
